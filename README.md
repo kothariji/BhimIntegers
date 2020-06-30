@@ -76,3 +76,17 @@ that's All.
     n3 /= n2;
     cout<<"n3 /= n2: "<<n3<<endl;
 ```
+
+
+# Functions
+```
+    cout<<"Maximum: "<<maxBhim(n1, n2)<<endl;                               //Maximum of two Numbers
+    cout<<"Minimum: "<<minBhim(n1, n2)<<endl;                               //Minimum of two Numbers
+    cout<<"absolute: "<<absBhim(n1)<<" "<<absBhim(n2)<<endl;                //Absolute value of a number
+    cout<<"Factorial: "<<factBhim(n1)<<" "<<factBhim(n2)<<endl;             //Factorial of a number
+    cout<<"Reverse: "<<revBhim(n3)<<endl;                                   //Reverse a number
+    cout<<"Counting the occurance of a digit: "<<countBhim(n9,6)<<endl;     //Counting the occurance of a digit
+    cout<<"Erasing all occurance of a digit: "<<eraseBhim(n9,4)<<endl;      //Erasing all occurances of a digit
+    cout<<"isPaliBhim: "<<(bool)isPaliBhim(n9)<<endl;                       //Checking if a number is palindrome
+    cout<<"sorting the digits: "<<sortBhim(n9)<<endl;                       //sort the digits of a number
+```
