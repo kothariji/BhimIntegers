@@ -47,3 +47,32 @@ that's All.
     cout<<"5 * n2: "<<5*n2<<endl;
     cout<<"5 / n2: "<<5/n2<<endl;
 ```
+
+# Other Operations
+
+### unary operations
+```
+    cout<<"PreIncrement: "<<++n2<<endl;
+    cout<<"PreDecrement: "<<--n2<<endl;
+    cout<<"PostIncrement: "<<n2++<<endl;
+    cout<<"PostDecrement: "<<n2--<<endl;
+```
+### equality check
+```
+    cout<<"Check n3 != n5: "<<(bool)(n3 != n5)<<endl;              //Checking if value of both are different
+    cout<<"Check n3 == n5: "<<(bool)(n3 == n5)<<endl;              //Checking if value of both are same
+```
+### few other operators
+```
+    n3 += n2;
+    cout<<"n3 += n2: "<<n3<<endl;
+
+    n3 -= n2;
+    cout<<"n3 -= n2: "<<n3<<endl;
+
+    n3 *= n2;
+    cout<<"n3 *= n2: "<<n3<<endl;
+
+    n3 /= n2;
+    cout<<"n3 /= n2: "<<n3<<endl;
+```
