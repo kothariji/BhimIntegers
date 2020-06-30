@@ -7,6 +7,17 @@
 #include <algorithm>
 using namespace std;
 
+/**************************************************
+
+	Author: Dhruv Kothari
+		Nishant Handge
+		Tanuj Mehta
+
+****************************************************/
+
+
+
+
 #define absBhim BhimInteger::absBhimInteger
 #define factBhim BhimInteger::factBhimInteger
 #define maxBhim BhimInteger::maxBhimInteger
