@@ -7,7 +7,7 @@
 
 # Usage
 #### Download the "BhimInteger.h" header .Then #include it inside your code:
-```
+```c++
 #include "BhimInteger.h"   // the actual path may vary
 that's All.
 ```
