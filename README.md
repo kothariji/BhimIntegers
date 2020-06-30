@@ -9,10 +9,9 @@
 #### Download the "BhimInteger.h" header .Then #include it inside your code:
 ```c++
 #include "BhimInteger.h"   // the actual path may vary
-that's All.
 ```
 # Declaring A Variable
-```
+```c++
     BhimInteger n1;                                             //n1 defined with value 0
     BhimInteger n2(123);                                        //n2 defined with value int value
     BhimInteger n3((long long int)1234567898765432);            //n3 defined with value long long int value
@@ -21,7 +20,7 @@ that's All.
 ```
 
 # Converting to BhimNumbers
-```
+```c++
     int num1 = -321;
     long long int num2 = -9876543219876543;
     string str1 = "-2112321321321312421534365777";
@@ -31,7 +30,7 @@ that's All.
 ```
  
  # Arithmatic Operations
- ```
+ ```c++
     cout<<"Addition: "<<n1+n2<<endl;                             //Addition
     cout<<"Subtraction: "<<n2-n1<<endl;                          //subtraction
     cout<<"Multiplication: "<<n1*n2<<endl;                       //Multiplication
@@ -51,19 +50,19 @@ that's All.
 # Other Operations
 
 ### unary operations
-```
+```c++
     cout<<"PreIncrement: "<<++n2<<endl;
     cout<<"PreDecrement: "<<--n2<<endl;
     cout<<"PostIncrement: "<<n2++<<endl;
     cout<<"PostDecrement: "<<n2--<<endl;
 ```
 ### equality check
-```
+```c++
     cout<<"Check n3 != n5: "<<(bool)(n3 != n5)<<endl;              //Checking if value of both are different
     cout<<"Check n3 == n5: "<<(bool)(n3 == n5)<<endl;              //Checking if value of both are same
 ```
 ### few other operators
-```
+```c++
     n3 += n2;
     cout<<"n3 += n2: "<<n3<<endl;
 
@@ -79,7 +78,7 @@ that's All.
 
 
 # Functions
-```
+```c++
     cout<<"Maximum: "<<maxBhim(n1, n2)<<endl;                               //Maximum of two Numbers
     cout<<"Minimum: "<<minBhim(n1, n2)<<endl;                               //Minimum of two Numbers
     cout<<"absolute: "<<absBhim(n1)<<" "<<absBhim(n2)<<endl;                //Absolute value of a number
