@@ -4,13 +4,13 @@
 ###An Implementation of BigInteger library in C++
 
 
-#Usage
+# Usage
 Download the "BhimInteger.h" header .Then #include it inside your code:
 ```
 #include "BhimInteger.h"   // the actual path may vary
 that's All.
 ```
-#Declaring A Variable
+# Declaring A Variable
 ```
     BhimInteger n1;                                             //n1 defined with value 0
     BhimInteger n2(123);                                        //n2 defined with value int value
