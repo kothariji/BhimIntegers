@@ -58,8 +58,8 @@
 ```
 ### equality check
 ```c++
-    cout<<"Check n3 != n5: "<<(bool)(n3 != n5)<<endl;              //Checking if value of both are different
-    cout<<"Check n3 == n5: "<<(bool)(n3 == n5)<<endl;              //Checking if value of both are same
+    cout<<"Check n3 != n5: "<<(bool)(n3 != n5)<<endl;            //Checking if value of both are different
+    cout<<"Check n3 == n5: "<<(bool)(n3 == n5)<<endl;            //Checking if value of both are same
 ```
 ### few other operators
 ```c++
