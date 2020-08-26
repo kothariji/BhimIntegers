@@ -2,7 +2,7 @@
 ### An Implementation of BigInteger library in C++
 ![Banner](https://github.com/kothariji/BhimIntegers/blob/master/Bhim%20Integers.jpg?raw=true)
 
-
+BhimIntegers is basically a C++ library which is useful when we are dealing with BigIntegers. We can handle big integers (integers having size bigger than the long long int data type) and we can perfom arithmetic operations like addition, multiplication, subtraction, division, equality check etc. Also  there are several functions like factorial, reverse. We can check that the number is a palindromic number, couting occurances etc. It has some conversion option to conver a string to bhimInteger etc. Overall this library is very useful for computing large results.
 
 
 # Usage
