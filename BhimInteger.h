@@ -127,27 +127,47 @@ class BhimInteger {
         int sum=0;
         int m=s.length();
         int n=s1.length();
-        vector<int>v;
-        for(i=m-1,j=n-1;i>=0||j>=0;i--,j--)
-        {
-            sum=carry;
-            if(i>=0)
-            {
-                sum+=s[i]-'0';
-            }
-            if(j>=0)
-            {
-                sum+=s1[j]-'0';
-            }
-            v.push_back(sum%10);
-            carry=sum/10;
-        }
-        if(carry!=0)
-        v.push_back(carry);
-
         string y = "";
-        for(i=v.size()-1;i>=0;i--)
-        y += (char)(v[i]+48);
+        if(m == 0 && n == 0)
+        {
+            y = "0";
+        }
+        else if(s[0] == '-' && s1[0] == '-')
+        {
+            y = add(s.erase(0,1), s1.erase(0, 1));
+            y = '-' + y;
+        }
+        else if(s[0] == '-')
+        {
+            y = subtract(s1, s.erase(0, 1));
+        }
+        else if(s1[0] == '-')
+        {
+            y = subtract(s, s1.erase(0, 1));
+        }
+        else
+        {
+            vector<int>v;
+            for(i=m-1,j=n-1;i>=0||j>=0;i--,j--)
+            {
+                sum=carry;
+                if(i>=0)
+                {
+                    sum+=s[i]-'0';
+                }
+                if(j>=0)
+                {
+                    sum+=s1[j]-'0';
+                }
+                v.push_back(sum%10);
+                carry=sum/10;
+            }
+            if(carry!=0)
+            v.push_back(carry);
+
+            for(i=v.size()-1;i>=0;i--)
+                y += (char)(v[i]+48);
+        }
         return y;
     }
 
