@@ -29,7 +29,7 @@
     BhimInteger n8 = to_Bhim(str1);                              //converting string to BhimInteger
 ```
  
- # Arithmatic Operations
+ # Arithmetic Operations
  ```c++
     cout<<"Addition: "<<n1+n2<<endl;                             //Addition
     cout<<"Subtraction: "<<n2-n1<<endl;                          //subtraction
