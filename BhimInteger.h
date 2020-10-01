@@ -43,7 +43,11 @@ class BhimInteger {
 
     BhimInteger (string s)
     {
-        str = s;
+        if(!isInputCorrect(s)) {
+            cerr << "Invalid Input.. Please Use Valid BhimInteger" << endl;
+            exit(0);
+        }
+        str = s;        
     }
 
     BhimInteger (int n)
@@ -62,9 +66,23 @@ class BhimInteger {
 
     BhimInteger (const BhimInteger &N2)
     {
+        if(!isInputCorrect(N2.str)) {
+            cerr << "Invalid Input.. Please Use Valid BhimInteger" << endl;
+            exit(0);
+        }
         str = N2.str;
     }
 
+    // Input Validator
+    bool isInputCorrect(string s) {
+        if(s[0] == '-')
+            s.erase(0, 1);
+        for(int i = 0; i < s.length(); ++i) {
+            if((int)s[i] < 48 || (int)s[i] > 57)
+                return false;
+        }
+        return true;
+    }
 
     friend ostream &operator<<( ostream &output, const BhimInteger &N )
     {
