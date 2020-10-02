@@ -5,6 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
+#include <math.h>
 using namespace std;
 
 /**************************************************
@@ -28,6 +29,7 @@ using namespace std;
 #define eraseBhim BhimInteger::eraseBhimInteger
 #define isPaliBhim BhimInteger::isPaliBhimInteger
 #define sortBhim BhimInteger::sortBhimInteger
+#define powBhim BhimInteger::powBhimInteger
 
 class BhimInteger {
 
@@ -556,6 +558,88 @@ class BhimInteger {
             return "0";
 
         return result;
+    }
+
+    static string power(string str1, string str2) {
+    if(str2 == "0") {
+        return "1";
+    } else if(str1 == "0") {
+        if(str2[0] == '-')
+            return to_string((long long int)std::pow(0, -5));
+        return "0";
+    } else if(str1[0] == '-' && str2[0] == '-') {
+        if(str1 == "-1" && str2 == "-1") {
+            return "-1";
+        } else if(str1 == "-1") {
+            if((((int)str2[str2.length()-1])-48) & 1) {                
+                return "-1";
+            } else {
+                return "1";
+            }
+        } else {
+            return "0";
+        }
+    } else if(str1[0] == '-') {
+        if((((int)str2[str2.length()-1])-48) & 1)
+            return '-' + power(str1.erase(0, 1), str2);
+        return power(str1.erase(0, 1), str2);
+    } else if(str2[0] == '-') {
+        if(str1 == "1") {
+            return str1;
+        } else {
+            return "0";
+        }
+    } else {
+        string init_str1 = str1;
+        while(str2 != "1") {
+            str1 = multiply(str1, init_str1);
+            str2 = subtract(str2, "1");
+        }
+        return str1;
+    }
+}
+
+    static BhimInteger powBhimInteger(string str1, string str2)
+    {
+        BhimInteger temp;
+        temp.str = power(str1, str2);
+        return temp;
+    }
+    static BhimInteger powBhimInteger(BhimInteger &n1, string str2)
+    {
+        BhimInteger temp;
+        temp.str = power(n1.str, str2);
+        return temp;
+    }
+    static BhimInteger powBhimInteger(string str1, BhimInteger &n2)
+    {
+        BhimInteger temp;
+        temp.str = power(str1, n2.str);
+        return temp;
+    }
+    static BhimInteger powBhimInteger(BhimInteger &n1, BhimInteger &n2)
+    {
+        BhimInteger temp;
+        temp.str = power(n1.str, n2.str);
+        return temp;
+    }
+    static BhimInteger powBhimInteger(int n1, int n2)
+    {
+        BhimInteger temp;
+        temp.str = power(to_string(n1), to_string(n2));
+        return temp;
+    }
+    static BhimInteger powBhimInteger(long int n1, long int n2)
+    {
+        BhimInteger temp;
+        temp.str = power(to_string(n1), to_string(n2));
+        return temp;
+    }
+    static BhimInteger powBhimInteger(long long int n1, long long int n2)
+    {
+        BhimInteger temp;
+        temp.str = power(to_string(n1), to_string(n2));
+        return temp;
     }
 
     static string factorial(int n)
