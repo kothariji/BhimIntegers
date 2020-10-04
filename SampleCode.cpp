@@ -87,6 +87,7 @@ int main()
     cout<<"Erasing all occurance of a digit: "<<eraseBhim(n9,4)<<endl;      //Erasing all occurances of a digit
     cout<<"isPaliBhim: "<<(bool)isPaliBhim(n9)<<endl;                       //Checking if a number is palindrome
     cout<<"sorting the digits: "<<sortBhim(n9)<<endl;                       //sort the digits of a number
+    cout<<"Finds power: "<<powBhim(n3, n2)<<endl;                           //finds x to the power y, where x and y is any int. Returns Integer value in form of string
 
     return 0;
 }
