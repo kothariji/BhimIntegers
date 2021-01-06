@@ -1,10 +1,10 @@
 #include<iostream>
-//initialisation of library
 #include "BhimInteger.h"
 using namespace std;
 
 int main()
 {
+    using namespace Bhim;
     /********declaration of variables*********/
     BhimInteger n1;                                             //n1 defined with value 0
     BhimInteger n2(123);                                        //n2 defined with value int value
